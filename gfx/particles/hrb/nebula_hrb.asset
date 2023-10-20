@@ -1,0 +1,179 @@
+particle={
+	name="nebula_hrb_file"
+	subsystem={
+		name="smoke"
+		max_amount=10
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=150
+			z=25
+			alpha=50,alpha_fade
+		}
+		position={
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 180 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch=0
+		velocity_yaw=0
+		life={ 2 0 }
+		emission=3
+		size={ 10 3 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="lightning"
+		max_amount=10
+		slave_particles=0
+		sort="depth"
+		emitter_type="box"
+		box_emitter_x={ 0 0.1 }
+		box_emitter_y={ 0 0 }
+		box_emitter_z={ 0 0 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=yes
+		texture={
+			file="gfx/particles/lightning_spark.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=155
+			y=100
+			z=25
+			alpha=255,lightning_fade
+		}
+		position={
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch=0
+		velocity_yaw=0
+		life={ 0.3 0.1 }
+		emission={ 10 0 }
+		size={ 6 1 }
+		particle_yaw={ 0 90 }
+		particle_pitch={ 0 45 }
+		rotation={ 90 0 }
+	}
+	subsystem={
+		name="glow"
+		max_amount=20
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/fire04.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=250
+			y=100
+			z=0
+			alpha=50,alpha_fade
+		}
+		position={
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch=0
+		velocity_yaw=0
+		velocity=0
+		life={ 6 0 }
+		emission=2
+		size={ 10,grow 0 }
+		particle_yaw={ 0 0 }
+		particle_pitch={ 90 0 }
+		rotation={ 0 180 }
+		rotation_speed=1
+	}
+	animation={
+		name="lightning_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.124 1 0.241 0 0.371 1 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.35 1 0.54118 0.75 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=2
+		curve={
+			0 0.219 1 0.33594 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

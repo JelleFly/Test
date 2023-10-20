@@ -1,0 +1,2183 @@
+#------------ Playable Countries ----------#
+ufop = {
+	name = "ufop"
+	short_name = "EMPIRE_SHORT_NAME_ufop"
+	country_id = "ufop"
+	adjective = "PRESCRIPTED_adjective_ufop"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+
+	shuffle_starting_position = no
+	is_major = yes
+	is_bespoke = yes
+	in_previous_contact = yes
+	ship_prefix = "PRESCRIPTED_ship_prefix_ufop"
+
+	species = {
+		class = "HRB"
+		portrait = "fedhuman"
+		name = "PRESCRIPTED_species_name_humans1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		name_list = "UFP1"
+		trait = "trait_universal_settlers"
+		trait = "trait_natural_explorers"
+		trait = "trait_high_maintenance"
+	}
+
+	additional_species = {
+		85 = {
+			# Don't fill this option
+			# Overrided with the main species
+			# If you don't want the main species on the random modify the number (chance) to -1
+		}
+
+		##Vulcans
+		10 = {
+			class = "HRB"
+			portrait = "vulcan"
+			name = "PRESCRIPTED_species_name_vulcans"
+			plural = "PRESCRIPTED_species_plural_vulcans"
+			adjective = "PRESCRIPTED_species_adjective_vulcans"
+			name_list = "UFP2"
+			trait = "trait_vulcan_longevity"
+			trait = "trait_logical_mind"
+			trait = "trait_low_reproduction_rate"
+		}
+
+		##Andorians
+		10 = {
+			class = "HRB"
+			portrait = "andorian"
+			name = "PRESCRIPTED_species_name_andorians"
+			plural = "PRESCRIPTED_species_plural_andorians"
+			adjective = "PRESCRIPTED_species_adjective_andorians"
+			name_list = "UFP3"
+			trait = "trait_environmental_resistance"
+			trait = "trait_militaristic_life"
+			trait = "trait_andorian_code_of_honor"
+		}
+
+		##Tellarites
+		10 = {
+			class = "HRB"
+			portrait = "tellarite"
+			name = "PRESCRIPTED_species_name_tellarites"
+			plural = "PRESCRIPTED_species_plural_tellarites"
+			adjective = "PRESCRIPTED_species_adjective_tellarites"
+			name_list = "UFP4"
+			trait = "trait_tellarite_dyspnea"
+			trait = "trait_born_to_argue"
+			trait = "trait_sharp_wits"
+		}
+	}
+
+	additional_modules = {
+		ufop_assimilation_module = {}
+	}
+
+	room = "ufop_01_transmission_room"
+
+	authority = "auth_federated_democracy"
+	civics = { "civic_higher_education" "civic_diplomatic_expertise" }
+	government = gov_representative_democracy
+	origin = "origin_ufop"
+
+	ethic = "ethic_pacifist"
+	ethic = "ethic_materialist"
+	ethic = "ethic_egalitarian"
+
+	flags = { human_1 custom_start_screen ufop }
+	# initial_technologies = { tech_replicator_1 tech_ufop_starfleet_academy }
+
+	system_name = "NAME_Sol"
+	planet_name = "NAME_Earth"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "ufop_sol_initializer"
+	home_planet_initial_pops = 26
+
+	conquered_system_initializers = {
+		"ufop_andor_initializer" "ufop_vulcan_initializer" "ufop_tellar_initializer" "ufop_outpost_initializer"
+		"ufop_eden_initializer" "ufop_draken_initializer" "denobula_outpost_initializer" "risa_outpost_initializer" 
+		"cordian_outpost_initializer" "wolf_initializer" "iconia_system_initializer" "nelvana_III_system_initializer"
+		"ufop_qualor_initializer" "ufop_setlik_initializer" "galorndon_core_system_initializer"
+	}
+
+	graphical_culture = "ufop_01"
+	city_graphical_culture = "ufop_01"
+
+	emblem_key = "flag_UFOP_10"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_UFOP_10.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"ufop"
+			"black"
+			"null"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_ufop"
+		gender = female
+		portrait = "unique_34"
+		texture = 0
+		hair = 0
+		clothes = 0
+		is_bespoke = yes
+		leader_class = ruler
+		trait = leader_trait_explorer
+		trait = leader_trait_frontier_spirit
+	}
+}
+
+#Klingon Empire Definition
+
+klingon1 = {
+	name = "Klingon Empire"
+	short_name = "EMPIRE_SHORT_NAME_klingon"
+	country_id = "klingon"
+	adjective = "PRESCRIPTED_adjective_klingon"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = no
+	is_major = yes
+	is_bespoke = yes
+	in_previous_contact = yes
+	ship_prefix = "PRESCRIPTED_ship_prefix_klingon"
+
+	species = {
+		class = "HRB"
+		portrait = "klingon"
+		name = "PRESCRIPTED_species_name_klingon"
+		plural = "PRESCRIPTED_species_plural_klingon"
+		adjective = "PRESCRIPTED_species_adjective_klingon"
+		name_list = "KLG1"
+		trait = "trait_traditional"
+		trait = "trait_strong"
+		trait = "trait_unruly"
+	}
+
+	additional_modules = {
+		klingon_assimilation_module = {}
+	}
+
+	room = "klingon_01_transmission_room"
+
+	authority = "auth_clan_empire"
+	civics = { "civic_followers_of_kahless" "civic_warriors_honor" }
+	government = gov_martial_empire
+
+	origin = "origin_klingon"
+
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_fanatic_militarist"
+
+	flags = { human_2 custom_start_screen klingon }
+	# initial_technologies = { tech_replicator_1 tech_cloaking_device_1 }
+
+	system_name = "NAME_Qonos"
+	planet_name = "NAME_Qonos"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "klingon_qonos_initializer"
+	conquered_system_initializers = { "klingon_qonos_initializer" "klingon_boreth_initializer" "klingon_narendra_initializer" "klingon_ogat_initializer" 
+	"klingon_outpost_initializer" "klingon_tygokor_initializer" "krios_system_initializer" "klingon_hatoria_initializer" "quvat_system_initializer" "klingon_khitomer_initializer" "beta_penthe_system_initializer"
+
+	}
+
+	graphical_culture = "klingon_01"
+	city_graphical_culture = "klingon_01"
+
+	emblem_key = "flag_Klingon_11"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Klingon_11.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Klingon"
+			"black"
+			"null"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_klingon"
+		portrait = "unique_37"
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		is_bespoke = yes
+		leader_class = ruler
+		trait = leader_trait_from_ranks
+		trait = leader_trait_deep_connections
+	}
+
+	combat_rewards = "klingon_combat_rewards"
+}
+
+#Romulan Star Empire Definition
+
+romulan1 = {
+	name = "Romulan Star Empire"
+	short_name = "EMPIRE_SHORT_NAME_romulan"
+	country_id = "romulan"
+	adjective = "PRESCRIPTED_adjective_romulan"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = no
+	is_major = yes
+	is_bespoke = yes
+	ship_prefix = "PRESCRIPTED_ship_prefix_romulan"
+	in_previous_contact = yes
+	species = {
+		class = "HRB"
+		portrait = "romulan"
+		name = "PRESCRIPTED_species_name_romulan"
+		plural = "PRESCRIPTED_species_plural_romulan"
+		adjective = "PRESCRIPTED_species_adjective_romulan"
+		name_list = "RML1"
+		trait = "trait_everlasting"
+		trait = "trait_quick_learners"
+		trait = "trait_solitary"
+	}
+
+	additional_modules = {
+		romulan_assimilation_module = {}
+	}
+
+	room = "romulan_01_transmission_room"
+
+	authority = "auth_state_senate"
+	civics = { "civic_closet_politics" "civic_state_vigilance" }
+	government = gov_executive_committee
+	
+	origin = "origin_romulan"
+
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_materialist"
+	ethic = "ethic_xenophobe"
+
+	flags = { human_2 custom_start_screen romulan }
+	# initial_technologies = { tech_replicator_1 tech_cloaking_device_1 }
+
+	system_name = "NAME_Romula"
+	planet_name = "NAME_Romulus"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "romulan_romulus_initializer"
+
+	conquered_system_initializers = { 
+		"romulan_romulus_initializer" "romulan_kithomer_initializer" "romulan_unroth_initializer"
+		"romulan_chaltok_initializer" "romulan_achernar_initializer" "romulan_outpost_initializer" 
+		"romulan_romii_initializer" "romulan_galador_initializer" "romulan_rator_initializer"
+		"romulan_Gamma_Hydra_initializer" "romulan_devron_initializer" "nelvana_III_system_initializer"
+		"romulan_cheron_initializer" 
+	}
+
+	graphical_culture = "romulan_01"
+	city_graphical_culture = "romulan_01"
+
+	emblem_key = "flag_Romulan_12"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Romulan_12.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Romulan"
+			"black"
+			"null"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_romulan"
+		portrait = "unique_38"
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		is_bespoke = yes
+		leader_class = ruler
+		trait = leader_trait_eye_talent_governor
+		trait = leader_trait_champion_people
+	}
+}
+
+#Cardassian Union Definition
+
+cardassian1 = {
+	name = "Cardassian Union"
+	short_name = "EMPIRE_SHORT_NAME_cardassian"
+	country_id = "cardassian"
+	adjective = "PRESCRIPTED_adjective_cardassian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = no
+	is_major = yes
+	is_bespoke = yes
+	ship_prefix = "PRESCRIPTED_ship_prefix_cardassian"
+	in_previous_contact = yes
+	home_planet_initial_pops = 25
+
+	species = {
+		class = "CRD"
+		portrait = "cardassian"
+		name = "PRESCRIPTED_species_name_cardassian"
+		plural = "PRESCRIPTED_species_plural_cardassian"
+		adjective = "PRESCRIPTED_species_adjective_cardassian"
+		name_list = "CRD1"
+		trait = "trait_talented"
+		trait = "trait_enduring"
+		trait = "trait_decadent"
+	}
+
+	additional_species = {
+		70 = {
+			# Don't fill this option
+			# Overrided with the main species
+			# If you don't want the main species on the random modify the number (chance) to -1
+		}
+
+		##Bajorans
+		10 = {
+			class = "HRB"
+			portrait = "bajoran"
+			name = "PRESCRIPTED_species_name_bajoran"
+			plural = "PRESCRIPTED_species_plural_bajoran"
+			adjective = "PRESCRIPTED_species_adjective_bajoran"
+			name_list = "BAJO"
+			trait = "trait_survivors_bajoran"
+			trait = "trait_prophetic_believer_bajoran"
+			trait = "trait_selective_researchers_bajoran"
+		}
+
+		##Andorians
+		10 = {
+			class = "HRB"
+			portrait = "andorian"
+			name = "PRESCRIPTED_species_name_andorians"
+			plural = "PRESCRIPTED_species_plural_andorians"
+			adjective = "PRESCRIPTED_species_adjective_andorians"
+			name_list = "UFP3"
+			trait = "trait_environmental_resistance"
+			trait = "trait_militaristic_life"
+			trait = "trait_andorian_code_of_honor"
+		}
+
+		##Tellarites
+		10 = {
+			class = "HRB"
+			portrait = "tellarite"
+			name = "PRESCRIPTED_species_name_tellarites"
+			plural = "PRESCRIPTED_species_plural_tellarites"
+			adjective = "PRESCRIPTED_species_adjective_tellarites"
+			name_list = "UFP4"
+			trait = "trait_tellarite_dyspnea"
+			trait = "trait_born_to_argue"
+			trait = "trait_sharp_wits"
+		}
+	}
+
+	additional_modules = {
+		cardassian_assimilation_module = {}
+	}
+
+	room = "cardassian_01_transmission_room"
+
+	authority = "auth_central_command"
+	civics = { "civic_raider_corps" "civic_intelligence_zeal" }
+	government = gov_military_dictatorship
+
+	origin = "origin_cardassian"
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_militarist"
+	ethic = "ethic_authoritarian"
+
+	flags = { human_2 custom_start_screen cardassia }
+	# initial_technologies = { tech_replicator_1 }
+
+	system_name = "NAME_Cardassia"
+	planet_name = "NAME_Cardassia_Prime"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "cardassian_cardassia_initializer"
+	conquered_system_initializers = { "cardassian_cardassia_initializer" "cardassian_cardassia_initializer" "cardassia_amleth_initializer" "cardassia_septimus_initializer" "cardassia_outpost_initializer" "cardassian_celtris_initializer" "cardassia_velos_initializer" "cardassia_trelka_initializer" "cardassia_avenal_initializer" }
+
+	graphical_culture = "cardassian_01"
+	city_graphical_culture = "cardassian_01"
+
+	emblem_key = "flag_Cardassian_13"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Cardassian_13.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Cardassian"
+			"black"
+			"null"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_cardassian"
+		portrait = "unique_35"
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		is_bespoke = yes
+		leader_class = ruler
+		trait = leader_trait_investor
+		trait = leader_trait_military_pioneer
+	}
+}
+
+#------------ Minor Countries -----------#
+
+# Talarian
+talarian = {
+	name = "Talarian Republic"
+	short_name = "EMPIRE_SHORT_NAME_talarian"
+	country_id = "talarian"
+	adjective = "PRESCRIPTED_adjective_talarian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_talarian"
+
+	species = {
+		class = "HRB"
+		portrait = "talarian"
+		name = "PRESCRIPTED_species_name_talarian"
+		plural = "PRESCRIPTED_species_plural_talarian"
+		adjective = "PRESCRIPTED_species_adjective_talarian"
+		name_list = "TALA"
+		trait = "trait_vigilant_talarian"
+		trait = "trait_undying_duty_talarian"
+		trait = "trait_chaste_talarian"
+	}
+
+	room = "minor_07_transmission_room"
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_war_is_the_way" }
+	government = gov_patriarchal_republic
+
+	origin = "origin_default"
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	flags = { human_2 talarian starting_gov }
+
+	system_name = "NAME_Talar"
+	planet_name = "NAME_Talaria"
+	planet_class = "pc_desert"
+	planet_subclass = psc_class_m
+	initializer = "talarian_talar_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Talarian_14"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Talarian_14.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Talarian"
+			"black"
+			"null"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_talarian"
+		portrait = "talarian_male_01"
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+		trait = leader_trait_expansionist
+		trait = leader_trait_explorer
+	}
+}
+
+# Bajoran
+bajoran = {
+	name = "Bajoran Republic"
+	short_name = "EMPIRE_SHORT_NAME_bajoran"
+	country_id = "bajoran"
+	adjective = "PRESCRIPTED_adjective_bajoran"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = no
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_bajoran"
+
+	species = {
+		class = "HRB"
+		portrait = "bajoran"
+		name = "PRESCRIPTED_species_name_bajoran"
+		plural = "PRESCRIPTED_species_plural_bajoran"
+		adjective = "PRESCRIPTED_species_adjective_bajoran"
+		name_list = "BAJO"
+		trait = "trait_survivors_bajoran"
+		trait = "trait_prophetic_believer_bajoran"
+		trait = "trait_selective_researchers_bajoran"
+	}
+
+	room = "minor_06_transmission_room"
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_past_guides_future" }
+	government = gov_theodemocratic_republic
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_fanatic_spiritualist"
+
+	origin = "origin_default"
+
+	flags = { human_2 bajoran starting_spy }
+
+	system_name = "NAME_Bajoran_System"
+	planet_name = "NAME_Bajor"
+	planet_class = "pc_desert"
+	planet_subclass = psc_class_m
+	initializer = "bajoran_bajor_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Bajoran_15"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Bajoran_15.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Bajoran"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_bajoran"
+		portrait = "bajoran_female_03"
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+		trait = leader_trait_expansionist
+		trait = leader_trait_explorer
+	}
+}
+
+# Bolian
+bolian = {
+	name = "Bolian Democracy"
+	short_name = "EMPIRE_SHORT_NAME_bolian"
+	country_id = "bolian"
+	adjective = "PRESCRIPTED_adjective_bolian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_bolian"
+
+	species = {
+		class = "HRB"
+		portrait = "bolian"
+		name = "PRESCRIPTED_species_name_bolian"
+		plural = "PRESCRIPTED_species_plural_bolian"
+		adjective = "PRESCRIPTED_species_adjective_bolian"
+		name_list = "BOLI"
+		trait = "trait_entrepreneurial_bolian"
+		trait = "trait_blueblood_bolian"
+		trait = "trait_digestor_bolian"
+	}
+
+	room = "minor_05_transmission_room"
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_wealth_trust" }
+	government = gov_capitalist_democracy
+
+	ethic = "ethic_xenophile"
+	ethic = "ethic_fanatic_materialist"
+
+	origin = "origin_default"
+
+	flags = { human_2 bolian starting_gov }
+
+	system_name = "NAME_Bolian"
+	planet_name = "NAME_Bolarus"
+	planet_class = "pc_desert"
+	planet_subclass = psc_class_m
+	initializer = "bolian_bolarus_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Bolian_16"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Bolian_16.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Bolian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_bolian"
+		portrait = "bolian_male_01"
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Boslic
+boslic = {
+	name = "Boslic Anarchy"
+	short_name = "EMPIRE_SHORT_NAME_boslic"
+	country_id = "boslic"
+	adjective = "PRESCRIPTED_adjective_boslic"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_boslic"
+
+	species = {
+		class = "HRB"
+		portrait = "boslic"
+		name = "PRESCRIPTED_species_name_boslic"
+		plural = "PRESCRIPTED_species_plural_boslic"
+		adjective = "PRESCRIPTED_species_adjective_boslic"
+		name_list = "BOSL"
+		trait = "trait_smugglers_boslic"
+		trait = "trait_roamers_boslic"
+		trait = "trait_amoral_boslic"
+	}
+
+	room = "minor_04_transmission_room"
+
+	authority = "auth_pirate_guild"
+	civics = { "void_civic" "civic_under_nose" }
+	#civics = { "civic_smugglers" "civic_slave_traders" } 
+	#government = gov_representative_democracy
+	government = gov_capitalist_anarchy
+
+	ethic = "ethic_fanatic_materialist"
+	ethic = "ethic_xenophile"
+
+	origin = "origin_default"
+
+	flags = { human_2 boslic starting_spy }
+
+	system_name = "NAME_Boslic"
+	planet_name = "NAME_Boslic"
+	planet_class = "pc_desert"
+	planet_subclass = psc_class_m
+	initializer = "boslic_boslic_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Boslic_17"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Boslic_17.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Boslic"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_boslic"
+		portrait = "boslic_female_01"
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Ktarian
+ktarian = {
+	name = "Ktarian Enclave"
+	short_name = "EMPIRE_SHORT_NAME_ktarian"
+	country_id = "ktarian"
+	adjective = "PRESCRIPTED_adjective_ktarian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_ktarian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "ktarian"
+		name = "PRESCRIPTED_species_name_ktarian"
+		plural = "PRESCRIPTED_species_plural_ktarian"
+		adjective = "PRESCRIPTED_species_adjective_ktarian"
+		name_list = "KTAR"
+		
+		trait = "trait_deceivers_ktarian"
+		trait = "trait_neuro_engineers_ktarian"
+		trait = "trait_disruptive_ktarian"
+	}
+
+	room = "minor_03_transmission_room"
+
+	authority = "auth_imperial"
+	civics = { "void_civic" "civic_cunning_subterfuge" }
+	government = gov_technocratic_enclave
+
+	ethic = "ethic_militarist"
+	ethic = "ethic_materialist"
+	ethic = "ethic_authoritarian"
+
+	origin = "origin_default"
+
+	flags = { human_2 ktarian starting_spy }
+
+	system_name = "NAME_Ktarian"
+	planet_name = "NAME_Ktarian_Home_Planet"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "ktarian_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Ktarian_20"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Ktarian_20.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Ktarian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_ktarian"
+		portrait = "ktarian_female_01"
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# J'naii
+jnaii = {					
+	name = "J'naii Council"
+	short_name = "EMPIRE_SHORT_NAME_jnaii"
+	country_id = "jnaii"
+	adjective = "PRESCRIPTED_adjective_jnaii"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_jnaii"
+
+	species = {
+		class = "JNA" 		# TODO: Add the individual class 
+		portrait = "jnaii" # TODO: Add a portrait
+		name = "PRESCRIPTED_species_name_jnaii"
+		plural = "PRESCRIPTED_species_plural_jnaii"
+		adjective = "PRESCRIPTED_species_adjective_jnaii"
+		name_list = "JNAI" # TODO: Add later
+		
+		trait = "trait_kindred_jnaii"
+		trait = "trait_enlightened_jnaii"
+		trait = "trait_conformist_jnaii"
+	}
+
+	room = "minor_02_transmission_room"
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_road_most_traveled" } 
+	government = gov_panel_of_judges 
+
+	ethic = "ethic_pacifist"
+	ethic = "ethic_materialist"
+	ethic = "ethic_xenophobe"
+
+	origin = "origin_default"
+
+	flags = { human_2 jnaii starting_gov }
+
+	system_name = "NAME_Jnaii"
+	planet_name = "NAME_Jnaii_Home_Planet"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+
+	initializer = "jnaii_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Jnaii_19"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Jnaii_19.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Jnaii"
+			"black"
+			"null"
+			"null"		
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_jnaii"
+		portrait = "jnaii" # TODO: Add J'naii portrait
+		# gender = male
+		texture = 1
+		hair = 1
+		clothes = 1
+		leader_class = ruler
+	}
+}
+
+# Trills
+trill = {
+	name = "Trill Assembly" 
+	short_name = "EMPIRE_SHORT_NAME_trill"
+	country_id = "trill"
+	adjective = "PRESCRIPTED_adjective_trill"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_trill"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "trill"
+		name = "PRESCRIPTED_species_name_trill"
+		plural = "PRESCRIPTED_species_plural_trill"
+		adjective = "PRESCRIPTED_species_adjective_trill"
+		name_list = "TRIL"
+		
+		trait = "trait_joined_elite_trill"
+		trait = "trait_experience_seekers_trill" 
+		trait = "trait_private_trill"
+	}
+
+	room = "minor_01_transmission_room"
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_cumulative_knowledge" }
+	government = gov_ascendant_meritocracy
+
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_pacifist"
+	ethic = "ethic_xenophile" 
+
+	origin = "origin_default"
+
+	flags = { human_2 trill starting_spy }
+
+	system_name = "NAME_Trill"
+	planet_name = "NAME_Trill_Home_Planet"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "trill_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Trill_21"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Trill_21.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Trill"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_trill"
+		portrait = "trill_female_01" # TODO: Add Trill portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Acamarian
+acamarian = {
+	name = "Acamarian Clans"
+	short_name = "EMPIRE_SHORT_NAME_acamarian"
+	country_id = "acamarian"
+	adjective = "PRESCRIPTED_adjective_acamarian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_acamarian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "acamarian"
+		name = "PRESCRIPTED_species_name_acamarian"
+		plural = "PRESCRIPTED_species_plural_acamarian"
+		adjective = "PRESCRIPTED_species_adjective_acamarian"
+		name_list = "ACAM"
+
+		trait = "trait_stubborn_resilience_acamarian" 
+	 	trait = "trait_divergent_acamarian"
+		trait = "trait_combative_acamarian"
+	}
+
+	room = "minor_07_transmission_room"
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_marauder_flotilla" }
+	government = gov_representative_clan_system
+
+	ethic = "ethic_fanatic_militarist"
+	ethic = "ethic_egalitarian"
+
+	origin = "origin_default"
+
+	flags = { human_2 acamarian starting_gov }
+
+	system_name = "NAME_Acamarian"
+	planet_name = "NAME_Acamarian_Home_Planet"
+	planet_class = "pc_ocean"
+	planet_subclass = psc_class_m
+	initializer = "acamarian_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Acamarians_22"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Acamarians_22.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Acamarians"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_acamarian"
+		portrait = "acamarian_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Kaelon
+kaelon = {
+	name = "Kaelon Republic"
+	short_name = "EMPIRE_SHORT_NAME_kaelon"
+	country_id = "kaelon"
+	adjective = "PRESCRIPTED_adjective_kaelon"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_kaelon"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "kaelon"
+		name = "PRESCRIPTED_species_name_kaelon"
+		plural = "PRESCRIPTED_species_plural_kaelon"
+		adjective = "PRESCRIPTED_species_adjective_kaelon"
+		name_list = "KAEL"
+		
+		trait = "trait_conservative_kaelon"
+	 	trait = "trait_resourceful_kaelon"
+		trait = "trait_secluded_kaelon" 
+	}
+
+	room = "minor_06_transmission_room"
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_utopian_beliefs" }
+	government = gov_protectionist_republic
+
+	ethic = "ethic_fanatic_xenophobe"
+	ethic = "ethic_materialist" 
+
+	origin = "origin_default"
+
+	flags = { human_2 kaelon starting_gov }
+
+	system_name = "NAME_Kaelon"
+	planet_name = "NAME_Kaelon_Home_Planet"
+	planet_class = "pc_continental"
+	planet_subclass = psc_class_m
+	initializer = "kaelon_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Kaelon_23"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Kaelon_23.dds" # TODO: Adding the actual .dds
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Kaelon"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_kaelon"
+		portrait = "kaelon_female_01" # TODO: Add Kaelon portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Farian
+farian = {
+	name = "Farian Syndicate"
+	short_name = "EMPIRE_SHORT_NAME_farian"
+	country_id = "farian"
+	adjective = "PRESCRIPTED_adjective_farian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_farian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "farian"
+		name = "PRESCRIPTED_species_name_farian"
+		plural = "PRESCRIPTED_species_plural_farian"
+		adjective = "PRESCRIPTED_species_adjective_farian"
+		name_list = "FARI"
+		
+		trait = "trait_cunning_farians"
+	 	trait = "trait_entrepreneurial_farians"
+		trait = "trait_exploitative_farians" 
+	}
+
+	room = "minor_05_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_corporate" 
+	civics = { "void_civic" "civic_back_alley_diplomacy" }
+	government = gov_corrupt_syndicate
+
+	ethic = "ethic_fanatic_materialist" 
+	ethic = "ethic_xenophile"
+
+	origin = "origin_default"
+
+	flags = { human_2 farian starting_spy }
+
+	system_name = "NAME_Farian"
+	planet_name = "NAME_Farian_Home_Planet"
+	planet_class = "pc_tundra"
+	planet_subclass = psc_class_m
+	initializer = "farian_initializer"
+
+	graphical_culture = "minor_01"
+	city_graphical_culture = "minor_01"
+
+	emblem_key = "flag_Farian_24"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Farian_24.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Farian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_farian"
+		portrait = "farian_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Tanugan
+tanugan = {
+	name = "Tanugan Anocracy"
+	short_name = "EMPIRE_SHORT_NAME_tanugan"
+	country_id = "tanugan"
+	adjective = "PRESCRIPTED_adjective_tanugan"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_tanugan"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "tanugan"
+		name = "PRESCRIPTED_species_name_tanugan"
+		plural = "PRESCRIPTED_species_plural_tanugan"
+		adjective = "PRESCRIPTED_species_adjective_tanugan"
+		name_list = "TANU"
+		
+		trait = "trait_inquisitive_tanugan" 
+	 	trait = "trait_law_abiding_tanugan" 
+		trait = "trait_skeptics_tanugan"
+	}
+
+	room = "minor_04_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_question_everything" } #HRB_TODO
+	government = gov_inquisitorial_anocracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 tanugan starting_spy }
+
+	system_name = "NAME_Tanugan"
+	planet_name = "NAME_Tanugan_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "tanugan_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Tanugan_25" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Tanugan_25.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Tanugan"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_tanugan" #HRB_TODO
+		portrait = "tanugan_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Pelian
+pelian = {
+	name = "Pelian Republic"
+	short_name = "EMPIRE_SHORT_NAME_pelian"
+	country_id = "pelian"
+	adjective = "PRESCRIPTED_adjective_pelian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_pelian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "pelian"
+		name = "PRESCRIPTED_species_name_pelian"
+		plural = "PRESCRIPTED_species_plural_pelian"
+		adjective = "PRESCRIPTED_species_adjective_pelian"
+		name_list = "PELI"
+		
+		trait = "trait_smart_workers_pelian"
+	 	trait = "trait_organized_pelian"
+		trait = "trait_busy_minds_pelian"
+	}
+
+	room = "minor_03_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_unrepenting_exploitation" } #HRB_TODO
+	government = gov_gubernatorial_republic
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 pelian starting_gov }
+
+	system_name = "NAME_pelian"
+	planet_name = "NAME_pelian_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "pelian_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Pelian_27" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Pelian_27.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Pelian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_pelian" #HRB_TODO
+		portrait = "pelian_female_03" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Lissepian
+lissepian = {
+	name = "Lissepian Corporatocracy"
+	short_name = "EMPIRE_SHORT_NAME_lissepian"
+	country_id = "lissepian"
+	adjective = "PRESCRIPTED_adjective_lissepian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_lissepian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "lissepian"
+		name = "PRESCRIPTED_species_name_lissepian"
+		plural = "PRESCRIPTED_species_plural_lissepian"
+		adjective = "PRESCRIPTED_species_adjective_lissepian"
+		name_list = "LISS"
+		
+		trait = "trait_eye_for_business_lissepian"
+	 	trait = "trait_timely_lissepian"
+		trait = "trait_intermediaries_lissepian"
+	}
+
+	room = "minor_02_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_corporate"
+	civics = { "void_civic" "civic_debts_repaid" } #HRB_TODO
+	government = gov_corporatocracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 lissepian starting_spy }
+
+	system_name = "NAME_lissepian"
+	planet_name = "NAME_lissepian_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "lissepian_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Lissepian_26" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Lissepian_26.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Lissepian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_lissepian" #HRB_TODO
+		portrait = "lissepian_female_02" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Hupyrian
+Hupyrian = {
+	name = "Hupyrian Autocracy"
+	short_name = "EMPIRE_SHORT_NAME_hupyrian"
+	country_id = "hupyrian"
+	adjective = "PRESCRIPTED_adjective_hupyrian"
+	spawn_enabled = always 
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_hupyrian"
+
+	species = {
+		class = "HRB"
+		portrait = "hupyrian"
+		name = "PRESCRIPTED_species_name_hupyrian"
+		plural = "PRESCRIPTED_species_plural_hupyrian"
+		adjective = "PRESCRIPTED_species_adjective_hupyrian"
+		name_list = "HUPY"
+		
+		trait = "trait_devout_hupyrian"
+	 	trait = "trait_sturdy_hupyrian"
+		trait = "trait_great_needs_hupyrian"
+	}
+
+	room = "minor_01_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_solid_reputation" } #HRB_TODO
+	government = gov_social_autocracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 hupyrian starting_gov }
+
+	system_name = "NAME_Hupyrian"
+	planet_name = "NAME_Hupyrian_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "hupyrian_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Hupyrian_30" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Hupyrian_30.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Hupyrian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_hupyrian" #HRB_TODO
+		portrait = "hupyrian_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Idanian
+idanian = {
+	name = "Idanian Clans" # HRB_TODO: TBD
+	short_name = "EMPIRE_SHORT_NAME_idanian"
+	country_id = "idanian"
+	adjective = "PRESCRIPTED_adjective_idanian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_idanian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "idanian"
+		name = "PRESCRIPTED_species_name_idanian"
+		plural = "PRESCRIPTED_species_plural_idanian"
+		adjective = "PRESCRIPTED_species_adjective_idanian"
+		name_list = "IDAN"
+		
+		trait = "trait_secretive_idanian"
+	 	trait = "trait_observant_idanian"
+		trait = "trait_reserved_idanian"
+	}
+
+	room = "minor_06_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_twofold_chances" } #HRB_TODO
+	government = gov_clan_of_spies
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 idanian starting_spy }
+
+	system_name = "NAME_Idanian"
+	planet_name = "NAME_Idanian_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "idanian_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Idanian_28" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Idanian_28.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Idanian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_idanian" #HRB_TODO
+		portrait = "idanian_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Kesprytt
+kesprytt = {
+	name = "Kesprytt Republic" # HRB_TODO: TBD
+	short_name = "EMPIRE_SHORT_NAME_kesprytt"
+	country_id = "kesprytt"
+	adjective = "PRESCRIPTED_adjective_kesprytt"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_kesprytt"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "kesprytt"
+		name = "PRESCRIPTED_species_name_kesprytt"
+		plural = "PRESCRIPTED_species_plural_kesprytt"
+		adjective = "PRESCRIPTED_species_adjective_kesprytt"
+		name_list = "KESP"
+		
+		trait = "trait_disbelieving_kesprytt"
+	 	trait = "trait_utilitarian_kesprytt"
+		trait = "trait_ununified_kesprytt"
+	}
+
+	room = "minor_05_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_paranoia" } #HRB_TODO
+	government = gov_split_republics
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 kesprytt starting_spy }
+
+	system_name = "NAME_Kesprytt"
+	planet_name = "NAME_Kesprytt_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "kesprytt_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Kesprytt_29"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Kesprytt_29.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Kesprytt"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_kesprytt" #HRB_TODO
+		portrait = "kesprytt_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Cairn
+cairn = {
+	name = "Cairn Democracy" # HRB_TODO: TBD
+	short_name = "EMPIRE_SHORT_NAME_cairn"
+	country_id = "cairn"
+	adjective = "PRESCRIPTED_adjective_cairn"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_cairn"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "cairn"
+		name = "PRESCRIPTED_species_name_cairn"
+		plural = "PRESCRIPTED_species_plural_cairn"
+		adjective = "PRESCRIPTED_species_adjective_cairn"
+		name_list = "CAIR"
+		
+		trait = "trait_uninhibited_cairn"
+	 	trait = "trait_telepathic_cairn"
+		trait = "trait_pacifists_cairn"
+	}
+
+	room = "minor_04_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_efficient_communication" } #HRB_TODO
+	government = gov_socialist_democracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 cairn starting_spy }
+
+	system_name = "NAME_Cairn"
+	planet_name = "NAME_Cairn_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "cairn_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Cairn_31" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Cairn_31.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Cairn"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_cairn" #HRB_TODO
+		portrait = "cairn_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Iyaaran
+iyaaran = {
+	name = "Iyaaran Scientocracy"
+	short_name = "EMPIRE_SHORT_NAME_iyaaran"
+	country_id = "iyaaran"
+	adjective = "PRESCRIPTED_adjective_iyaaran"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_iyaaran"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "iyaaran"
+		name = "PRESCRIPTED_species_name_iyaaran"
+		plural = "PRESCRIPTED_species_plural_iyaaran"
+		adjective = "PRESCRIPTED_species_adjective_iyaaran"
+		name_list = "IYAA"
+		
+		trait = "trait_leisureless_iyaaran"
+	 	trait = "trait_undemanding_iyaaran"
+		trait = "trait_unhurried_iyaaran"
+	}
+
+	room = "minor_03_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_systematized_structure" } #HRB_TODO
+	government = gov_scientocracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 iyaaran starting_gov }
+
+	system_name = "NAME_Iyaaran"
+	planet_name = "NAME_Iyaaran_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "iyaaran_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Iyaaran_32" #HRB_TODO
+
+	empire_flag = { #HRB_TODO
+		icon= {
+			category = "emblem"
+			file = "flag_Iyaaran_32.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Iyaaran"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_iyaaran" #HRB_TODO
+		portrait = "iyaaran_male_01" # HRB_TODO: Change Ruler Portrait
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Malcorian
+malcorian = {
+	name = "Malcorian Republic"
+	short_name = "EMPIRE_SHORT_NAME_malcorian"
+	country_id = "malcorian"
+	adjective = "PRESCRIPTED_adjective_malcorian"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = yes
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_malcorian"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "malcorian"
+		name = "PRESCRIPTED_species_name_malcorian"
+		plural = "PRESCRIPTED_species_plural_malcorian"
+		adjective = "PRESCRIPTED_species_adjective_malcorian"
+		name_list = "MALC"
+		
+		trait = "trait_transcendentalists_malcorian"
+	 	trait = "trait_traditionalists_malcorian"
+		trait = "trait_cynical_malcorian"
+	}
+
+	room = "minor_02_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_democratic"
+	civics = { "void_civic" "civic_fast_paced_science" } #HRB_TODO
+	government = gov_parliamentary_republic
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 malcorian starting_gov }
+
+	system_name = "NAME_Malcorian"
+	planet_name = "NAME_Malcorian_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "malcorian_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Malcorian_33"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Malcorian_33.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Malcorian"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_malcorian" #HRB_TODO
+		portrait = "malcorian_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+# Betazoid
+betazoid = {
+	name = "Betazoid Houses"
+	short_name = "EMPIRE_SHORT_NAME_betazoid"
+	country_id = "betazoid"
+	adjective = "PRESCRIPTED_adjective_betazoid"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = no
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_betazoid"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "betazoid"
+		name = "PRESCRIPTED_species_name_betazoid"
+		plural = "PRESCRIPTED_species_plural_betazoid"
+		adjective = "PRESCRIPTED_species_adjective_betazoid"
+		name_list = "BETA"
+		
+		trait = "trait_empath_betazoid"
+	 	trait = "trait_matriarcal_houses_betazoid"
+		trait = "trait_hard_to_please_betazoid"
+	}
+
+	room = "minor_01_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_forthcoming" } #HRB_TODO
+	government = gov_matriarchal_aristocracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 betazoid starting_gov }
+
+	system_name = "NAME_Betazoid"
+	planet_name = "NAME_Betazoid_Home_Planet"
+	planet_class = "pc_tundra" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "betazoid_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Betazoid_34"
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Betazoid_34.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Betazoid"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_betazoid" #HRB_TODO
+		portrait = "betazoid_female_01" # HRB_TODO: Change Ruler Portrait
+		gender = female
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}
+
+ferengi = {
+	name = "Ferengi Alliance"
+	short_name = "EMPIRE_SHORT_NAME_betazoid"
+	country_id = "Ferengi"
+	adjective = "PRESCRIPTED_adjective_ferengi"
+	spawn_enabled = always # yes / no / always
+	ignore_portrait_duplication = yes
+	match_home_system_initializer = yes	
+	shuffle_starting_position = no
+	is_minor = yes
+	is_bespoke = yes
+	in_previous_contact = no
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_betazoid"
+
+	species = {
+		class = "HRB" # TODO: Create custom class
+		portrait = "ferengi"
+		name = "PRESCRIPTED_species_name_ferengi"
+		plural = "PRESCRIPTED_species_plural_ferengi"
+		adjective = "PRESCRIPTED_species_adjective_ferengi"
+		name_list = "BETA"
+		
+		#trait = "trait_empath_betazoid"
+	 	#trait = "trait_matriarcal_houses_betazoid"
+		#trait = "trait_hard_to_please_betazoid"
+	}
+
+	room = "minor_01_transmission_room" # HRB_TODO: Define a proper room
+
+	authority = "auth_oligarchic"
+	civics = { "void_civic" "civic_forthcoming" } #HRB_TODO
+	government = gov_matriarchal_aristocracy
+
+	ethic = "ethic_fanatic_materialist" #HRB_TODO
+	ethic = "ethic_xenophile" #HRB_TODO
+
+	origin = "origin_default"
+
+	flags = { human_2 betazoid starting_gov }
+
+	system_name = "NAME_Ferenginar"
+	planet_name = "NAME_Ferengi_Home_Planet"
+	planet_class = "pc_tropical" #HRB_TODO
+	planet_subclass = psc_class_m
+	initializer = "ferengi_initializer"
+
+	graphical_culture = "minor_01" #HRB_TODO
+	city_graphical_culture = "minor_01" #HRB_TODO
+
+	emblem_key = "flag_Betazoid_34"	#TODOS
+
+	empire_flag = {
+		icon= {
+			category = "emblem"
+			file = "flag_Betazoid_34.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"Betazoid"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_" #HRB_TODO
+		portrait = "ferengi_male_01" # HRB_TODO: Change Ruler Portrait
+		gender = male
+		texture = 0
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+	}
+}

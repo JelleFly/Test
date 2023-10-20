@@ -1,0 +1,16 @@
+
+# Plasma Stormfield
+plasma_stormfield = {
+	type = "plasma_stormfield"
+	
+	name = "hazard_plasma_stormfield_name"
+	desc = "hazard_plasma_stormfield_desc"
+	
+	hazard_movement_cost = 1000000
+	hazard_gfx_entity_id = "hazard02_entity"
+
+	polygon_scale = 1
+	coordinate = {	65       232	}#A
+	position = {x = -65 y = 232}
+
+}
